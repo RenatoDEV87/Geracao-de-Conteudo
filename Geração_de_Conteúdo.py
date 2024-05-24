@@ -1,7 +1,5 @@
 # Dicionário associando características aos modelos Claude 3 da Anthropic
-
 caracteristicas_modelos = {
-
   "automatizar tarefas": "Claude 3 Opus",
 
   "pesquisa e desenvolvimento": "Claude 3 Opus",
@@ -26,9 +24,6 @@ caracteristicas_modelos = {
 
 }
 
-
-
-
 def encontrar_modelo(caracteristica_fornecida):
 
   modelo_contagem = {}
@@ -39,30 +34,18 @@ def encontrar_modelo(caracteristica_fornecida):
 
       modelo_contagem[modelo] = modelo_contagem.get(modelo, 0) + 1
 
-   
-
   if modelo_contagem:
 
     # Retorna o modelo com a maior contagem de correspondências
 
     return max(modelo_contagem, key=modelo_contagem.get)
 
-   
-
   return "Modelo não encontrado."
 
-
-
-
 # Entrada do usuário
-
 caracteristica_fornecida = input()
 
-
-
-
 # Encontrar e imprimir o modelo correspondente
-
 modelo_correspondente = encontrar_modelo(caracteristica_fornecida)
 
 print(modelo_correspondente)
